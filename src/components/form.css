@@ -1,0 +1,164 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #72c6f4, #f8d0d0); /* Soft gradient background */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* MUI Root styling */
+  .MuiCssBaseline-root {
+    background-color: #ffffff; /* Ensure the background for MUI components is consistent */
+  }
+  
+  /* Form Container */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #ffffff; /* Keep the form background color the same */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    backdrop-filter: blur(10px); /* Added subtle blur effect for modern touch */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Soft border to add some contrast */
+  }
+  
+  /* Form Heading */
+  h3 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 2rem; /* Slightly larger font for heading */
+    font-weight: bold; /* Make the heading bold */
+    text-align: center;
+  }
+  
+  /* Input Fields */
+  .textField {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    font-weight: bold; /* Make input text bold */
+  }
+  
+  /* Country Code and Flag */
+  .MuiSelect-root {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    background-color: #f8f9fa; /* Soft background for input fields */
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #ddd; /* Light border for input fields */
+    font-weight: bold; /* Bold text for dropdowns */
+  }
+  
+  .MuiSelect-root .MuiSelect-icon {
+    display: none;
+  }
+  
+  .MuiMenuItem-root {
+    display: flex;
+    align-items: center;
+    font-weight: bold; /* Bold text for dropdown options */
+  }
+  
+  .MuiMenuItem-root .MuiSvgIcon-root {
+    margin-right: 10px;
+  }
+  
+  .MuiInputBase-root {
+    display: flex;
+    align-items: center;
+  }
+  
+  .MuiInputBase-input {
+    padding-left: 12px;
+    font-weight: bold; /* Bold input text */
+  }
+  
+  /* Flags styling */
+  .MuiSelect-root .MuiMenuItem-root img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Button Styling */
+  button {
+    margin-top: 1.5rem;
+    background-color: #00796b; /* Calming teal color */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+    font-weight: bold; /* Bold button text */
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #004d40; /* Darker shade of teal */
+    transform: translateY(-3px);
+  }
+  
+  button:disabled {
+    background-color: #b0bec5;
+    cursor: not-allowed;
+  }
+  
+  /* Dialog Styling */
+  .MuiDialog-paper {
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  .MuiDialogTitle-root {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold; /* Bold dialog titles */
+  }
+  
+  .MuiDialogContent-root {
+    padding: 20px 0;
+  }
+  
+  /* Error Messages */
+  .MuiTextField-root.Mui-error {
+    border-color: #f44336;
+  }
+  
+  .MuiFormHelperText-root.Mui-error {
+    color: #f44336;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 1rem;
+      width: 90%;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+    }
+  
+    .textField {
+      margin-bottom: 1rem;
+    }
+  
+    button {
+      padding: 10px 20px;
+    }
+  }
+  
