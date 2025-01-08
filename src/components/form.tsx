@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Typography, Box, MenuItem, Select, InputLabel, FormControl } from '@mui/material';
+import {
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  TextField,
+  Typography,
+  Box,
+  MenuItem,
+  Select,
+  InputLabel,
+  FormControl,
+} from '@mui/material';
 import Flag from 'react-world-flags';
 import './form.css';
 
@@ -9,7 +22,7 @@ const Form: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [company, setCompany] = useState<string>('');
   const [contactNumber, setContactNumber] = useState<string>('');
-  const [countryCode, setCountryCode] = useState<string>('+1'); // Default country code
+  const [countryCode, setCountryCode] = useState<string>(''); // Default country code
   const [error, setError] = useState<boolean>(false);
 
   const handleDialogOpen = () => {
@@ -22,7 +35,7 @@ const Form: React.FC = () => {
     setEmail('');
     setCompany('');
     setContactNumber('');
-    setCountryCode('+1');
+    setCountryCode('');
     setError(false);
   };
 
@@ -37,14 +50,14 @@ const Form: React.FC = () => {
   };
 
   return (
-    <Box 
-      sx={{ 
-        display: 'flex', 
-        flexDirection: 'column', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        height: '100vh', 
-        backgroundColor: '#f5f5f5' 
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        backgroundColor: '#f5f5f5',
       }}
     >
       {/* First Page */}
@@ -108,13 +121,58 @@ const Form: React.FC = () => {
                   displayEmpty
                 >
                   <MenuItem value="+1">
-                    <Flag code="US" style={{ width: 20, height: 20, marginRight: 8 }} /> +1
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="US" style={{ width: 20, height: 20 }} />
+                      United States (+1)
+                    </Box>
+                  </MenuItem>
+                  <MenuItem value="+49">
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="DE" style={{ width: 20, height: 20 }} />
+                      Germany (+49)
+                    </Box>
                   </MenuItem>
                   <MenuItem value="+44">
-                    <Flag code="GB" style={{ width: 20, height: 20, marginRight: 8 }} /> +44
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="GB" style={{ width: 20, height: 20 }} />
+                      United Kingdom (+44)
+                    </Box>
                   </MenuItem>
                   <MenuItem value="+91">
-                    <Flag code="IN" style={{ width: 20, height: 20, marginRight: 8 }} /> +91
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="IN" style={{ width: 20, height: 20 }} />
+                      India (+91)
+                    </Box>
+                  </MenuItem>
+                  <MenuItem value="+86">
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="CN" style={{ width: 20, height: 20 }} />
+                      China (+86)
+                    </Box>
+                  </MenuItem>
+                  <MenuItem value="+81">
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="JP" style={{ width: 20, height: 20 }} />
+                      Japan (+81)
+                    </Box>
+                  </MenuItem>
+                  <MenuItem value="+33">
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="FR" style={{ width: 20, height: 20 }} />
+                      France (+33)
+                    </Box>
+                  </MenuItem>
+                  <MenuItem value="+39">
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="IT" style={{ width: 20, height: 20 }} />
+                      Italy (+39)
+                    </Box>
+                  </MenuItem>
+                  <MenuItem value="+34">
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <Flag code="ES" style={{ width: 20, height: 20 }} />
+                      Spain (+34)
+                    </Box>
                   </MenuItem>
                   {/* Add more country options here */}
                 </Select>
